@@ -1,17 +1,23 @@
 while True:
     try:
-        N=int(input("Введите целое число n="))
+        n = int(input('введите целое число'))
+        break
     except:
-        print("Это не целое число,попробуй еще раз!")
-    else:
-        if n<=1:
-            print("Это целое число не больше 1,попробуй еще раз!")
-        else:
-            break
+        print('ошибка')
+from random import *
+q = [randint(-20,20) for i in range(n)]
+maxi = -100
+for i in q:
+    if i>maxi:
+        maxi=i
 k = 0
+for u in q:
+    if u==maxi:
+        break
+    if u>0:
+        k+=u
+q1 = q[::-1]
+print(k,q1)
 
-for i in range(1, N+1):
-    k += 2*i - 1
-    print('Квадрат числа', i, ':', k)
 
     

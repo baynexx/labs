@@ -1,17 +1,31 @@
+a = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя ,.!?'
 while True:
-    try:
-        n=int(input("Введите целое число n="))
-    except:
-        print("Это не целое число,попробуй еще раз!")
+    n = input('Введите текст')
+    g = 0
+    for i in n:
+        if i not in a:
+            g += 1
+    if g == 0:
+        break
     else:
-        if n<=1:
-            print("Это целое число не больше 1,попробуй еще раз!")
-        else:
-            break
-M = 80
-m1 = 400
-m2 = range(100, 320, 20)
-
-for m2 in m2:
-    a = m2- m1/m1+ m2 + M/2 *
-    print(a)
+        print('Попробуйте еще раз')
+gl = 'уеёэоаыиюяЯЫУАЕОИЮЭЁ'
+k = 0
+b = ''
+maxi = -1
+maxb=''
+for i in range(len(n)):
+    if k>maxi or len(b)>len(maxb):
+        maxi=k
+        maxb=b
+    if n[i]==' ' or n[i]=='.' or n[i]==',' or n[i]=='?' or n[i]=='!':
+        k=0
+        b=''
+    else:
+        b+=n[i]
+        if n[i] in gl:
+            k+=1
+if k>maxi or len(b)>len(maxb):
+    maxi=k
+    maxb=b
+print(maxb)

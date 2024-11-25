@@ -1,13 +1,26 @@
 while True:
     try:
-        n=int(input("Введите целое число n="))
-    except:
-        print("Это не целое число,попробуй еще раз!")
-    else:
-        if n<=1:
-            print("Это целое число не больше 1,попробуй еще раз!")
+        m = int(input('Ввудите число М - '))
+        if m<0:
+            print('Это число меньше 0,попробуйте еще раз')
         else:
             break
-for i in range(10, 21):
-    s = i ** 2
-    print('Квадрат числа',i, 'равен',s)
+    except:
+        print('Ошибка,попробуйте еще раз')
+import random
+A=[]
+for i in range(m):
+    n=[]
+    for j in range(m):
+        n.append(random.randint(-10,10))
+    A.append(n)
+print(A)
+k = 0
+for i in range(m):
+    for j in range(m):
+        if ((i+j)>(m+1)) and A[i][j]<0:
+            k += 1
+print(k)
+
+
+

@@ -16,11 +16,11 @@ for i in range(m):
     A.append(n)
 print(A)
 k = 0
-for i in range(m):
-    for j in range(m):
-        if ((i+j)>(m+1)) and A[i][j]<0:
-            k += 1
-print(k)
+for i in range(1,m+1):
+    for j in range(1,m+1):
+        if ((i+j)>(m+1)) and A[i-1][j-1]<0:
+            k+=1
+print('Количество отрицательных элементов ниже побочной диагонали -',k)
 
 
 

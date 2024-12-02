@@ -1,31 +1,46 @@
-a = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя ,.!?'
+import random
+
 while True:
-    n = input('Введите текст')
-    g = 0
-    for i in n:
-        if i not in a:
-            g += 1
-    if g == 0:
-        break
-    else:
-        print('Попробуйте еще раз')
-gl = 'уеёэоаыиюяЯЫУАЕОИЮЭЁ'
-k = 0
-b = ''
-maxi = -1
-maxb=''
-for i in range(len(n)):
-    if k>maxi or len(b)>len(maxb):
-        maxi=k
-        maxb=b
-    if n[i]==' ' or n[i]=='.' or n[i]==',' or n[i]=='?' or n[i]=='!':
-        k=0
-        b=''
-    else:
-        b+=n[i]
-        if n[i] in gl:
-            k+=1
-if k>maxi or len(b)>len(maxb):
-    maxi=k
-    maxb=b
-print(maxb)
+    try:
+        m = int(input("Введите число M - "))
+        if m < 0:
+            print("Это число меньше 0,попробуйте еще раз")
+        else:
+            break
+    except:
+        print("Ошибка,попробуйте еще раз")
+
+while True:
+    try:
+        n = int(input("Введите число N - "))
+        if n < 0:
+            print("Это число меньше 0,попробуйте еще раз")
+        else:
+            break
+    except:
+        print("Ошибка,попробуйте еще раз")
+
+A = []
+for i in range(m):
+    n1 = []
+    for j in range(n):
+        n1.append(random.randint(-10, 10))
+    A.append(n1)
+print(A)
+ma = 30
+stroka = 0
+stolb = 0
+for i in range(m):
+    for j in range(n):
+        if A[i][j] < ma:
+            ma = A[i][j]
+            stroka = i
+            stolb = j
+print("Минимальное число - ", ma)
+
+i = 0
+while i < m:
+    del A[i][stolb]
+    i += 1
+del A[stroka]
+print(A)

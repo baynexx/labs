@@ -1,23 +1,24 @@
+d ={}
+b = 'QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnmЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЁЯЧСМИТЬБЮйцукенгшщзхъфывапролджэёячсмитьбю '
 while True:
     try:
-        n = int(input('введите целое число'))
-        break
+        s = input('Введите строку - ')
+        f = True
+        for i in s:
+            if i not in b:
+                f=False
+        if f==True:
+            break
+        else:
+            print('Строка должна состоять только из букв')
     except:
-        print('ошибка')
-from random import *
-q = [randint(-20,20) for i in range(n)]
-maxi = -100
-for i in q:
-    if i>maxi:
-        maxi=i
-k = 0
-for u in q:
-    if u==maxi:
-        break
-    if u>0:
-        k+=u
-q1 = q[::-1]
-print(k,q1)
-
-
-    
+        print('Ошибка!!!')
+for i in s:
+    if i not in d and i!=' ':
+        d[i]=[s.count(i)]
+print(d)
+x = input('Ввведите букву - ')
+if x in s:
+    print('Она встречается',*d.setdefault(x),'раз')
+else:
+    print('Такой буквы здесь нет!')

@@ -1,4 +1,5 @@
-def f(v1, v2):  return v1 * v2
+def f(v1, v2):
+    return v1 * v2
 x = 10
 y = 10
 a = 15

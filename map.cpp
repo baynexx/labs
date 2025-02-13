@@ -1,5 +1,4 @@
 #include <iostream>
-#include <>
 int main() {
     double x, y, z;
 
@@ -13,4 +12,5 @@ int main() {
     std::cout << "Значение z: " << z << std::endl;
 
     return 0;
+
 }

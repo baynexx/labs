@@ -1,3 +1,6 @@
+// Ввести х, вычислить у.
+// Автор : Умашев Али ВПР12
+// Дата : 13.02.25
 #include <iostream>
 #include <cmath>
 using namespace std;

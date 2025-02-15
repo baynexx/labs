@@ -4,7 +4,7 @@
             "name": "C/C++: clang++ сборка и отладка активного файла",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/a.out",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
@@ -16,3 +16,4 @@
     ],
     "version": "2.0.0"
 }
+ч

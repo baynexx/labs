@@ -12,7 +12,7 @@ int main() {
     cin >> x;
 
     if (x > 0) {
-        f = 3 * sqrt(x) - pow(x, 4) * cos(2 * x);
+        f = 3 * sqrt(x) - pow (x , 4) * cos (2*x);
     } else if (x == 0) {
         f = sin(2 * pow(x, 3) - x) + pow(x, 2);
     } else {

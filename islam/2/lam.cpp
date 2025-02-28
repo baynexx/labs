@@ -8,7 +8,7 @@ int main(){
     srand(time(0));
     cout <<"massiv: ";
     for (int i = 0 ; i < 10; i++ ){
-        *(p+i) = rand()%100;
+        *(p+i) = (rand()%100)*2.8;
         cout<<*(p+i)<<" ";
     }
     cout<<"\n";

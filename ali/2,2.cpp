@@ -1,24 +1,22 @@
 #include <iostream>
-
+#include <ctime>
 using namespace std;
 
-int main() {
-    const int a = 10;         
-    double b[a];              
-    double C;                 
-    int count = 0;            
-
-    cout << "Введите 10 вещественных элементов массива: ";
-    
-    double* p = b; 
-    for (int i = 0; i < a; ++i) {
-        cin >> *(p + i); 
+int main() {        
+    double b[10], C;                 
+    int count = 0;
+    double *p = b; 
+    srand(time(0));
+    cout<<"Результаты соревнований : ";
+    for (int i=0; i<10; i++){
+        *(p+i)=(rand()%100+50)*2.9;
+        cout<<*(p+i)<<" ";
     }
-
+    cout<<"\n";
     cout << "Введите число C: ";
     cin >> C;
 
-    for (int i = 0; i < a; ++i) {
+    for (int i = 0; i < 10; ++i) {
         if (*(p + i) > C) {
             ++count;
         }

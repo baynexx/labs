@@ -17,6 +17,7 @@ int main() {
     cin >> C;
 
     for (int i = 0; i < 10; ++i) {
+  
         if (*(p + i) > C) {
             ++count;
         }

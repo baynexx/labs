@@ -1,29 +1,31 @@
 #include <iostream>
 #include <string>
-#include <sstream> // для stringstream
+#include <sstream>
+#include <cctype>
 
 using namespace std;
 
-    bool f(char c) {
-    c = tolower(c);
-    return string("аеёиоуыэюя").find(c) != string::npos;
+bool isVowel(char ch) {
+    ch = tolower(ch);
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'y');
 }
 
 int main() {
-    cout << "Введите текст: ";
     string text;
+    cout << "Введите текст: ";
     getline(cin, text);
     
-    int count = 0;
+    istringstream iss(text);
     string word;
-    stringstream ss(text); // разбиваем строку на слова
+    int count = 0;
     
-    while (ss >> word) { // читаем слово за словом
-        if (!word.empty() && f(word[0])) {
+    while (iss >> word) {
+        if (!word.empty() && isVowel(word[0])) {
             count++;
         }
     }
     
-    cout << "Количество слов на гласную: " << count << endl;
+    cout << "Количество слов, начинающихся с гласной: " << count << endl;
+    
     return 0;
 }
